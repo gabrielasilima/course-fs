@@ -2,6 +2,8 @@
   "dependencies": {
     "@redux-devtools/extension": "^4.0.0",
     "@reduxjs/toolkit": "^2.11.2",
+    "apollo-server": "^3.13.0",
+    "graphql": "^16.13.2",
     "morgan": "^1.10.1"
   },
   "devDependencies": {
