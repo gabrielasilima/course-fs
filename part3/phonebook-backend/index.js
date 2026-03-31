@@ -74,8 +74,8 @@ app.put('/api/persons/:id', (request, response, next) => {
 
   // Adicionamos { runValidators: true } para que o PUT também respeite as regras
   Person.findByIdAndUpdate(
-    request.params.id, 
-    { name, number }, 
+    request.params.id,
+    { name, number },
     { new: true, runValidators: true, context: 'query' }
   )
     .then(updatedPerson => {
