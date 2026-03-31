@@ -41,3 +41,35 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: O navegador renderiza a lista de notas atualizada
+```
+
+## 0.5: SPA diagram
+
+```mermaid
+sequenceDiagram
+    participant browser
+    participant server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+    activate server
+    server-->>browser: HTML document
+    deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    activate server
+    server-->>browser: CSS file
+    deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+    activate server
+    server-->>browser: JavaScript file
+    deactivate server
+
+    Note right of browser: O navegador executa o JavaScript
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    activate server
+    server-->>browser: JSON com as notas
+    deactivate server
+
+    Note right of browser: O JavaScript renderiza as notas na página
