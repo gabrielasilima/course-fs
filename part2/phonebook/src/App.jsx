@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import personService from './services/persons' // Importa o serviço
+import personService from './services/person.js' // Importa o serviço
 // (Mantenha seus componentes Filter e PersonForm)
 
 const App = () => {
