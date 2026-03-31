@@ -1,5 +1,10 @@
 {
   "dependencies": {
+    "@redux-devtools/extension": "^4.0.0",
+    "@reduxjs/toolkit": "^2.11.2",
     "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.15"
   }
 }
