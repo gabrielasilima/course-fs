@@ -73,3 +73,25 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: O JavaScript renderiza as notas na página
+
+```
+
+## 0.6: New note in SPA diagram
+
+```mermaid
+sequenceDiagram
+    participant browser
+    participant server
+
+    Note right of browser: Usuário escreve uma nova nota
+
+    Note right of browser: JavaScript intercepta o submit do formulário
+
+    Note right of browser: A nova nota é adicionada à lista local e renderizada na tela
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    activate server
+    server-->>browser: JSON com a nova nota
+    deactivate server
+
+    Note right of browser: Confirmação recebida do servidor (sem recarregar a página)
